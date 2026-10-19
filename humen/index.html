@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section (Name, Tagline, Navigation) -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>John Doe</h1>
+                <p>Web Developer & Designer</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Me Section -->
+        <section id="about" class="section-padding">
+            <div class="container about-container">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hello! I am a passionate web developer focused on creating clean, responsive, and user-friendly websites. I love turning complex problems into simple, beautiful, and intuitive designs.</p>
+                    <p>Currently studying Computer Science and looking for internship opportunities to apply my front-end development skills in real-world projects.</p>
+                </div>
+                <div class="about-image">
+                    <!-- 你可以替换为自己的图片路径，例如 images/profile.jpg -->
+                    <div class="image-placeholder">Profile Photo</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding bg-light">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>HTML5</h3>
+                        <p>Semantic structuring and modern web standards.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>CSS3</h3>
+                        <p>Flexbox, Grid, Responsive Design, and Animations.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Figma</h3>
+                        <p>UI/UX Design, wireframing, and prototyping.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Git & GitHub</h3>
+                        <p>Version control and project deployment via GitHub Pages.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image-placeholder">Project 1 Image</div>
+                        <div class="project-info">
+                            <h3>E-Commerce Landing Page</h3>
+                            <p>A fully responsive e-commerce landing page built with HTML and CSS using Flexbox layout.</p>
+                            <a href="#" class="btn">View Live</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image-placeholder">Project 2 Image</div>
+                        <div class="project-info">
+                            <h3>Recipe Blog Website</h3>
+                            <p>A clean, text-focused blog design optimized for viewing recipes across all device screens.</p>
+                            <a href="#" class="btn">View Live</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-light">
+            <div class="container contact-container">
+                <h2>Contact Me</h2>
+                <p>If you would like to collaborate or just say hi, feel free to reach out!</p>
+                <form class="contact-form" action="#" method="POST" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 John Doe. All rights reserved.</p>
+            <p>Built for Lab Assignment - WEEK06 HCI LAB</p>
+        </div>
+    </footer>
+
+</body>
+</html>

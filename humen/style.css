@@ -1,0 +1,324 @@
+/* --- Base Rules & Variables --- */
+:root {
+    --primary-color: #2b3a42;
+    --secondary-color: #3f5765;
+    --accent-color: #ff533d;
+    --light-bg: #f5f7f8;
+    --text-color: #333333;
+    --white: #ffffff;
+    --border-color: #dddddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* 基准字体大小 */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 5rem 0; /* 使用 rem 相对单位 */
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #e0442f;
+    transform: translateY(-2px);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+.logo p {
+    font-size: 0.85rem;
+    color: #b0c4de;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* --- About Me Section --- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    text-align: left;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: 250px;
+    height: 250px;
+    background-color: #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #64748b;
+    border: 5px solid var(--secondary-color);
+}
+
+/* --- Skills Section --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.skill-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1 1 calc(25% - 1.5rem); /* 四列布局 */
+    min-width: 220px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* --- Projects Section --- */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 calc(50% - 2rem); /* 两列布局 */
+    min-width: 280px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.project-image-placeholder {
+    height: 200px;
+    background-color: #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #475569;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* --- Contact Section --- */
+.contact-container {
+    max-width: 600px;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.btn-submit {
+    width: 100%;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-content p {
+    margin: 0.3rem 0;
+}
+
+/* --- Media Queries (Responsiveness) --- */
+
+/* 平板端适配 (Tablet - 768px 及以下) */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px; /* 略微减小全局字体 */
+    }
+
+    .about-container {
+        flex-direction: column; /* 布局垂直排列 */
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .about-text h2 {
+        text-align: center;
+    }
+
+    .skills-grid .skill-card {
+        flex: 1 1 calc(50% - 1.5rem); /* 改为两列布局 */
+    }
+}
+
+/* 移动端适配 (Mobile - 480px 及以下) */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .header-container {
+        flex-direction: column; /* 导航栏和 Logo 垂直堆叠 */
+        text-align: center;
+        gap: 0.8rem;
+    }
+
+    nav ul li {
+        margin: 0 0.8rem; /* 缩小导航项的间距 */
+    }
+
+    .skills-grid .skill-card,
+    .projects-grid .project-card {
+        flex: 1 1 100%; /* 全部变为单列全宽显示 */
+    }
+
+    .section-padding {
+        padding: 3rem 0; /* 减小上下内边距 */
+    }
+}
